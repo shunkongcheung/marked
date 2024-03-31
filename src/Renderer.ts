@@ -59,10 +59,11 @@ export class _Renderer {
     return `<li>${text}</li>\n`;
   }
 
-  checkbox(checked: boolean): string {
+  checkbox(checked: boolean, declined: boolean): string {
     return '<input '
       + (checked ? 'checked="" ' : '')
-      + 'disabled="" type="checkbox">';
+      + (declined ? 'disabled="true"' : 'disabled=""')
+      + ' type="checkbox">';
   }
 
   paragraph(text: string): string {
