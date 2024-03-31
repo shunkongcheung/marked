@@ -85,6 +85,7 @@ export namespace Tokens {
         raw: string;
         task: boolean;
         checked?: boolean | undefined;
+        declined?: boolean | undefined;
         loose: boolean;
         text: string;
         tokens: Token[];
