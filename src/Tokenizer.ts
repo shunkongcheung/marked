@@ -313,13 +313,15 @@ export class _Tokenizer {
         }
 
         let istask: RegExpExecArray | null = null;
+        let isdeclined: boolean | undefined;
         let ischecked: boolean | undefined;
         // Check for task list items
         if (this.options.gfm) {
-          istask = /^\[[ xX]\] /.exec(itemContents);
+          istask = /^\[[ xX-]\] /.exec(itemContents);
           if (istask) {
-            ischecked = istask[0] !== '[ ] ';
-            itemContents = itemContents.replace(/^\[[ xX]\] +/, '');
+            ischecked = istask[0] === '[x] ' || istask[0] === '[X] ';
+            isdeclined = istask[0] === '[-] ';
+            itemContents = itemContents.replace(/^\[[ xX-]\] +/, '');
           }
         }
 
@@ -328,6 +330,7 @@ export class _Tokenizer {
           raw,
           task: !!istask,
           checked: ischecked,
+          declined: isdeclined,
           loose: false,
           text: itemContents,
           tokens: []
