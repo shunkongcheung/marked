@@ -231,6 +231,7 @@ describe('Parser', () => {
                 {
                   task: true,
                   checked: false,
+                  declined: false,
                   tokens: [
                     {
                       type: 'text',
@@ -242,10 +243,23 @@ describe('Parser', () => {
                 {
                   task: true,
                   checked: true,
+                  declined: false,
                   tokens: [
                     {
                       type: 'text',
                       text: 'item 2',
+                      tokens: [{ type: 'text', text: 'item 2' }]
+                    }
+                  ]
+                },
+                {
+                  task: true,
+                  checked: false,
+                  declined: true,
+                  tokens: [
+                    {
+                      type: 'text',
+                      text: 'item 3',
                       tokens: [{ type: 'text', text: 'item 2' }]
                     }
                   ]
@@ -257,6 +271,7 @@ describe('Parser', () => {
 <ul>
   <li><input disabled type="checkbox"> item 1</li>
   <li><input checked disabled type="checkbox"> item 2</li>
+  <li><input disabled="true" type="checkbox"> item 3</li>
 </ul>`
         });
       });
