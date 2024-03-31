@@ -127,11 +127,12 @@ export class _Parser {
           for (let j = 0; j < listToken.items.length; j++) {
             const item = listToken.items[j];
             const checked = item.checked;
+            const declined = item.declined;
             const task = item.task;
 
             let itemBody = '';
             if (item.task) {
-              const checkbox = this.renderer.checkbox(!!checked);
+              const checkbox = this.renderer.checkbox(!!checked, !!declined);
               if (loose) {
                 if (item.tokens.length > 0 && item.tokens[0].type === 'paragraph') {
                   item.tokens[0].text = checkbox + ' ' + item.tokens[0].text;
