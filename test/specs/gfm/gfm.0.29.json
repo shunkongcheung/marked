@@ -55,8 +55,8 @@
   },
   {
     "section": "[extension] Task list items",
-    "html": "<ul>\n<li><input checked=\"\" disabled=\"\" type=\"checkbox\"> foo\n<ul>\n<li><input disabled=\"\" type=\"checkbox\"> bar</li>\n<li><input checked=\"\" disabled=\"\" type=\"checkbox\"> baz</li>\n</ul>\n</li>\n<li><input disabled=\"\" type=\"checkbox\"> bim</li>\n</ul>",
-    "markdown": "- [x] foo\n  - [ ] bar\n  - [x] baz\n- [ ] bim",
+    "html": "<ul>\n<li><input checked=\"\" disabled=\"\" type=\"checkbox\"> foo\n<ul>\n<li><input disabled=\"\" type=\"checkbox\"> bar</li>\n<li><input checked=\"\" disabled=\"\" type=\"checkbox\"> baz</li>\n</ul>\n</li>\n<li><input disabled=\"true\" type=\"checkbox\"> bim</li>\n</ul>",
+    "markdown": "- [x] foo\n  - [ ] bar\n  - [x] baz\n- [-] bim",
     "example": 280
   },
   {
