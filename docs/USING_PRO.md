@@ -118,7 +118,7 @@ marked.use({
 - <code>**heading**(*string* text, *number* level, *string* raw)</code>
 - <code>**hr**()</code>
 - <code>**list**(*string* body, *boolean* ordered, *number* start)</code>
-- <code>**listitem**(*string* text, *boolean* task, *boolean* checked)</code>
+- <code>**listitem**(*string* text, *boolean* task, *boolean* checked, *boolean* declined)</code>
 - <code>**checkbox**(*boolean* checked)</code>
 - <code>**paragraph**(*string* text)</code>
 - <code>**table**(*string* header, *string* body)</code>
