@@ -1056,6 +1056,7 @@ paragraph
         md: `
 - [ ] item 1
 - [x] item 2
+- [-] item 3
 `,
         tokens: [
           {
@@ -1074,6 +1075,7 @@ paragraph
                 raw: '- [ ] item 1\n',
                 task: true,
                 checked: false,
+                declined: false,
                 loose: false,
                 text: 'item 1',
                 tokens: [
@@ -1096,6 +1098,7 @@ paragraph
                 raw: '- [x] item 2',
                 task: true,
                 checked: true,
+                declined: false,
                 loose: false,
                 text: 'item 2',
                 tokens: [
@@ -1108,6 +1111,29 @@ paragraph
                         type: 'text',
                         raw: 'item 2',
                         text: 'item 2'
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                type: 'list_item',
+                raw: '- [-] item 3',
+                task: true,
+                checked: true,
+                declined: true,
+                loose: false,
+                text: 'item 3',
+                tokens: [
+                  {
+                    type: 'text',
+                    raw: 'item 3',
+                    text: 'item 3',
+                    tokens: [
+                      {
+                        type: 'text',
+                        raw: 'item 3',
+                        text: 'item 3'
                       }
                     ]
                   }
